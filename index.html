@@ -1,12 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Flipping Card</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Flipping Card</h1>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">☀️</span>
+            </button>
+        </header>
+
+        <div class="cards-wrapper">
+            <div class="card-container">
+                <div class="card" data-card="1">
+                    <div class="card-front">
+                        <img src="assets/car-1-front.jpg" alt="Car 1 front">
+                    </div>
+                    <div class="card-back">
+                        <img src="assets/car-1-back.jpg" alt="Car 1 back">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card" data-card="2">
+                    <div class="card-front">
+                        <img src="assets/car-2-front.jpg" alt="Car 2 front">
+                    </div>
+                    <div class="card-back">
+                        <img src="assets/car-2-back.jpg" alt="Car 2 back">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card" data-card="3">
+                    <div class="card-front">
+                        <img src="assets/car-3-front.jpg" alt="Car 3 front">
+                    </div>
+                    <div class="card-back">
+                        <img src="assets/car-3-back.jpg" alt="Car 3 back">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
