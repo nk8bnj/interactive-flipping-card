@@ -19,3 +19,22 @@ function updateThemeIcon(theme) {
     themeIcon.textContent = theme === 'light' ? '☀️' : '🌙️';
 }
 
+// Hover sound functionality
+const hoverSound = new Audio('assets/sound.mp3');
+hoverSound.volume = 0.5;
+
+const cardContainers = document.querySelectorAll('.card-container');
+
+cardContainers.forEach(container => {
+    const card = container.querySelector('.card');
+    
+    container.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+        hoverSound.currentTime = 0;
+        hoverSound.play().catch(err => {
+            // Ignore autoplay errors
+            console.log('Sound play prevented:', err);
+        });
+    });
+});
+
